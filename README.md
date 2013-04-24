@@ -14,16 +14,18 @@ Supported Platforms
 ## Contents
 
 * [Installing](#installing)
-* [Used technologies](#Used technologies)
-  - [Phonegap NFC Plugin](#Phonegap NFC Plugin)
-  - [jQuery mobile Windows Phone Theme](#jQuery mobile Windows Phone Theme)
-  - [Map](#license)
+* [Used technologies](#used-technologies)
+  - [Phonegap NFC Plugin](#phonegap-NFC-Plugin)
+  - [jQuery mobile Windows Phone Theme](#jQuery-mobile-Windows-Phone-Theme)
+  - [Map](#map)
  
 # Installing
 
 This solution was created with Microsoft Visual Studio 2012 ultimate. 
 
 # Used technologies
+
+How does the app work? Also special on that app is it comes in unusually format. It is a native mobile web app using PhoneGap with external sensor plugin. 
 
 ## Phonegap NFC Plugin
 
@@ -32,7 +34,7 @@ NFC is normally not supported in PhoneGap. It exists a cross-platform plugin tha
 
 ##jQuery mobile Windows Phone Theme
 
-[jqmobile-metro-theme](http://sgrebnov.github.io/jqmobile-metro-theme/)
+To make the application look like a native Windows Phone application, a special jQuery mobile theme was used. Watch this [jqmobile-metro-theme](http://sgrebnov.github.io/jqmobile-metro-theme/)
 
 ## Map
 
