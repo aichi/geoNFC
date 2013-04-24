@@ -1,0 +1,592 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements.  See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership.  The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License.  You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied.  See the License for the
+ specific language governing permissions and limitations
+ under the License. 
+-->
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3677C1B7-D68B-4CF9-BF8A-E869D437A6DF}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>windows_phone_8</RootNamespace>
+    <AssemblyName>windows-phone-8</AssemblyName>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+    <SilverlightVersion>
+    </SilverlightVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <TargetFrameworkIdentifier>WindowsPhone</TargetFrameworkIdentifier>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>en-US</SupportedCultures>
+    <UICulture>en-US</UICulture>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>CordovaAppProj_$(Configuration)_$(Platform).xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>windows_phone_8.App</SilverlightAppEntry>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <BackgroundAgentType />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>Bin\x86\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>full</DebugType>
+    <PlatformTarget>
+    </PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>Bin\x86\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>
+    </PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>Bin\ARM\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>full</DebugType>
+    <PlatformTarget>
+    </PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>Bin\ARM\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>
+    </PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Plugins\DateTimePicker.cs" />
+    <Compile Include="Plugins\DateTimePickerTask.cs" />
+    <Compile Include="Plugins\Ndef.cs" />
+    <Compile Include="Plugins\NfcPlugin.cs" />
+    <Compile Include="Plugins\PhoneTheme.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\ApplicationIcon.png" />
+    <Content Include="SplashScreenImage.jpg" />
+    <Content Include="Assets\Tiles\large_q.png" />
+    <Content Include="Assets\Tiles\large_q_back.png" />
+    <Content Include="Assets\Tiles\middle_q.png" />
+    <Content Include="Assets\Tiles\middle_q_back.png" />
+    <Content Include="Assets\Tiles\small_q.png" />
+    <Content Include="CordovaLib\WPCordovaClassLib.dll" />
+    <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Check.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Delete.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Select.png" />
+    <Content Include="www\css\app-bar.css" />
+    <Resource Include="www\css\default\images\ajax-loader.gif" />
+    <Content Include="www\css\default\images\ajax-loader.png" />
+    <Content Include="www\css\default\images\icons-18-black.png" />
+    <Content Include="www\css\default\images\icons-18-white.png" />
+    <Content Include="www\css\default\images\icons-36-black.png" />
+    <Content Include="www\css\default\images\icons-36-white.png" />
+    <Content Include="www\css\default\jquery.mobile.css" />
+    <Content Include="www\css\jquery.mobile.fixedToolbar.polyfill.css" />
+    <Content Include="www\css\master.css" />
+    <Content Include="www\css\mobiscroll-1.5.3.css" />
+    <Content Include="www\css\progress-bar.css" />
+    <Content Include="www\css\toggle-button.css" />
+    <Content Include="www\css\wp\images\ajax-loader.png" />
+    <Content Include="www\css\wp\images\check-black.png" />
+    <Content Include="www\css\wp\images\check-white.png" />
+    <Content Include="www\css\wp\images\checkbox-disabled.png" />
+    <Content Include="www\css\wp\images\icons-18-black.png" />
+    <Content Include="www\css\wp\images\icons-18-white.png" />
+    <Content Include="www\css\wp\images\icons-36-black.png" />
+    <Content Include="www\css\wp\images\icons-36-white.png" />
+    <Content Include="www\css\wp\images\radiobtn-black.png" />
+    <Content Include="www\css\wp\images\radiobtn-disabled.png" />
+    <Content Include="www\css\wp\images\radiobtn-white.png" />
+    <Resource Include="www\css\wp\images\wait-indicator.gif" />
+    <Content Include="www\css\wp\jquery.mobile.wp.theme.css" />
+    <Content Include="www\css\wp\jquery.mobile.wp.theme.init.js" />
+    <Content Include="www\images\appbar.cancel.rest.dark.png" />
+    <Content Include="www\images\appbar.cancel.rest.light.png" />
+    <Content Include="www\images\appbar.check.rest.dark.png" />
+    <Content Include="www\images\appbar.check.rest.ligth.png" />
+    <Content Include="www\images\empty.png" />
+    <Content Include="www\images\help.dark.png" />
+    <Content Include="www\images\help.light.png" />
+    <Content Include="www\images\icon_app_about.png" />
+    <Content Include="www\images\myapp-about.png" />
+    <Content Include="www\images\myapp-edit.png" />
+    <Content Include="www\images\myapp-map.png" />
+    <Content Include="www\images\myapp-tag-small.png" />
+    <Content Include="www\images\myapp-tag.png" />
+    <Content Include="www\images\set.dark.png" />
+    <Content Include="www\images\set.light.png" />
+    <Resource Include="www\images\wait-indicator.gif" />
+    <Content Include="www\images\tagNew.png" />
+    <Content Include="www\index.html" />
+    <Content Include="www\js\cordova\cordova-2.3.0.js" />
+    <Content Include="www\js\cordova\nfc-helper.js" />
+    <Content Include="www\js\cordova\phonegap-nfc.js" />
+    <Content Include="www\js\jQuery\app-bar.js" />
+    <Content Include="www\js\jQuery\dateTimePicker.js" />
+    <Content Include="www\js\jQuery\jquery.cordova.wp.themeswitcher.js" />
+    <Content Include="www\js\jQuery\jquery.easing.1.3.js" />
+    <Content Include="www\js\jQuery\jquery.globalstylesheet.js" />
+    <Content Include="www\js\jQuery\jquery.js" />
+    <Content Include="www\js\jQuery\jquery.mobile.fixedToolbar.polyfill.js" />
+    <Content Include="www\js\jQuery\jquery.mobile.js" />
+    <Content Include="www\js\jQuery\jquery.mobile.themeswitcher.js" />
+    <Content Include="www\js\jQuery\license.txt" />
+    <Content Include="www\js\jQuery\mobiscroll-1.5.3.js" />
+    <Content Include="www\js\jQuery\phoneTheme.js" />
+    <Content Include="www\js\jQuery\progress-bar.js" />
+    <Content Include="www\js\jQuery\toggle-button.js" />
+    <Content Include="www\js\view_helper.js" />
+    <Content Include="www\js\mh5-1.0.2\lib\changelog.txt" />
+    <Content Include="www\js\mh5-1.0.2\lib\colors.css" />
+    <Content Include="www\js\mh5-1.0.2\lib\fw.html" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\back2map_icon.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\button_active.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\button_inactive.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\button_long.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\button_long2.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\button_long2_light.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\button_long2_light_active.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\button_long_active.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\button_long_active2.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\button_radio_active.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\button_radio_inactive.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\button_segmented.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\01_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\01_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\02_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\02_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\03.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\03_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\03_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\04.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\04_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\04_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\05.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\05_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\05_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\06.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\06_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\06_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\07.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\07_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\07_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\08.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\08_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\08_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\09.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\09_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\09_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\10.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\10_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\10_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\11.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\11_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\11_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\12.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\12_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\12_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\13.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\13_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\13_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\14.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\14_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\14_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\15.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\15_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\15_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\16.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\16_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\16_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\17.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\17_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\17_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\18.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\18_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\18_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\19.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\19_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\19_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\20.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\20_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\20_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\21.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\21_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\21_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\22.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\22_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\22_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\23.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\23_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\23_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\24.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\24_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\24_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\25.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\25_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\25_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\26.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\26_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\26_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\27.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\27_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\27_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\28.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\28_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\28_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\29.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\29_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\29_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\30.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\30_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\30_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\31.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\31_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\31_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\32.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\32_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\32_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\33.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\33_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\33_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\34.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\34_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\34_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\35.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\35_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\35_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\36.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\36_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\36_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\37.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\37_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\37_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\38.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\38_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\38_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\39.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\39_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\39_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\40.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\40_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\40_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\41.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\41_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\41_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\42.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\42_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\42_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\43.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\43_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\43_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\44.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\44_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\44_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\45.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\45_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\45_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\46.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\46_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\46_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\47.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\47_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\47_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\48.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\48_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\48_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\49.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\49_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\49_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\50.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\50_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\50_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\51.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\51_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\51_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\52.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\52_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\52_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\53.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\53_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\53_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\54.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\54_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\54_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\55.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\55_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\55_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\56.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\56_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\56_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\57.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\57_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\57_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\58.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\58_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\58_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\59.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\59_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\59_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\60.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\60_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\60_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\61.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\61_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\61_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\62.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\62_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\62_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\63.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\63_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\63_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\64.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\64_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\64_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\65.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\65_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\65_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\66.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\66_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\66_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\67.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\67_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\67_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\68.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\68_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\68_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\69.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\69_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\69_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\70.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\70_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\70_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\71.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\71_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\71_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\72.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\72_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\72_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\73.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\73_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\73_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\74.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\74_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\74_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\75.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\75_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\75_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\76.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\76_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\76_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\77.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\77_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\77_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\78.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\78_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\78_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\79.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\79_01.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\categories\79_02.icon.mh5.basic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\emptystar_icon.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\empty_tile.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\empty_tile_offline.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\from.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\from_to.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\fullstar_icon.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\halfstar_icon.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\iconsheet.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\iconsheet_favourites.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\iconsheet_share.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\iconsheet_traffic.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\iconsheet_traffic_switch.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\maneuvers_black.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\maneuvers_white.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\mapsymbols\carto_POI_accommodation.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\mapsymbols\carto_POI_administrative-areas-buildings.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\mapsymbols\carto_POI_business-services.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\mapsymbols\carto_POI_eat-drink.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\mapsymbols\carto_POI_education-facility.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\mapsymbols\carto_POI_facilities.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\mapsymbols\carto_POI_going-out.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\mapsymbols\carto_POI_hospital-health-care-facility.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\mapsymbols\carto_POI_leisure-outdoor.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\mapsymbols\carto_POI_natural-geographical.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\mapsymbols\carto_POI_petrol-station.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\mapsymbols\carto_POI_pharmacy.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\mapsymbols\carto_POI_police-emergency.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\mapsymbols\carto_POI_post-office.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\mapsymbols\carto_POI_religious-place.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\mapsymbols\carto_POI_shopping.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\mapsymbols\carto_POI_sights-museums.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\mapsymbols\carto_POI_sport-facility-venue.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\mapsymbols\carto_POI_tourist-information.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\mapsymbols\carto_POI_transport.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\mapsymbols\tmc_blocking_accident_pole.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\mapsymbols\tmc_blocking_closure_pole.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\mapsymbols\tmc_blocking_congestion_pole.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\mapsymbols\tmc_blocking_other_pole.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\mapsymbols\tmc_blocking_roadworks_pole.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\mapsymbols\tmc_high_accident_pole.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\mapsymbols\tmc_high_congestion_pole.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\mapsymbols\tmc_high_other_pole.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\mapsymbols\tmc_high_roadworks_pole.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\mapsymbols\tmc_veryhigh_accident_pole.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\mapsymbols\tmc_veryhigh_congestion_pole.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\mapsymbols\tmc_veryhigh_other_pole.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\mapsymbols\tmc_veryhigh_roadworks_pole.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\nokia_logo_dark.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\nokia_logo_white.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\position.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\progressbar.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\pt_actions.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\pt_waypoints.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\searchResults_area_patternOverlay.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\searchResults_area_shadow.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\segmented_btn.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\spinner.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\spinner_big_bright.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\spinner_big_dark.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\squircle_active.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\squircle_light_active.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\textinput.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\textinput_search.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\img\to.png" />
+    <Content Include="www\js\mh5-1.0.2\lib\mh5.css" />
+    <Content Include="www\js\mh5-1.0.2\lib\mh5.js" />
+    <Content Include="www\js\mh5-1.0.2\lib\version.txt" />
+    <Content Include="www\js\mh5-1.0.2\map_helper.js" />
+    <Content Include="www\images\tag.png" />
+    <Content Include="www\pages\about.html" />
+    <Content Include="www\pages\nfcReader.html" />
+    <Content Include="www\pages\nfcWriter.html" />
+    <None Include="cordova\debug.bat" />
+    <None Include="cordova\emulate.bat" />
+    <None Include="packages.config" />
+    <None Include="Properties\AppManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\WMAppManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="www\js\mh5-1.0.2\lib\lang\en.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Reference Include="Microsoft.Phone.Controls.Toolkit">
+      <HintPath>packages\jQMThemeForWindowsPhone8.0.0.4\lib\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="WPCordovaClassLib, Version=2.3.0.0, Culture=neutral, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions />
+  <PropertyGroup>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+</Project>

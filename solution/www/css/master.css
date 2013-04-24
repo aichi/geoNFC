@@ -1,0 +1,139 @@
+* {
+    -webkit-touch-callout: none; /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none; /* prevent webkit from resizing text to fit */
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+    -webkit-user-select: none; /* prevent copy paste, to allow, change 'none' to 'text' */
+}
+
+body {
+    margin: 0px;
+}
+
+/* jQuery mobile theme*/
+/* custom icons for toggle button*/
+.ui-icon-demo-help,
+.ui-icon-demo-set {
+    background-repeat: no-repeat;
+    background-position: 50% 50% ;
+    background-size: 30px 30px;
+}
+
+.ui-toggle-checked .ui-icon-demo-help   {
+    background-image: url(../images/help.light.png);
+}
+
+.ui-toggle-unchecked .ui-icon-demo-help{
+    background-image: url(../images/help.dark.png);
+}
+
+.ui-toggle-checked .ui-icon-demo-set{
+    background-image: url(../images/set.light.png);
+}
+
+.ui-toggle-unchecked .ui-icon-demo-set{
+    background-image: url(../images/set.dark.png);
+}
+
+.ui-icon-demo-help,
+.ui-icon-demo-set {
+    background-repeat: no-repeat;
+    background-position: 50% 50% ;
+    background-size: 30px 30px;
+}
+
+.ui-btn-up-a .ui-icon-demo-help,
+.ui-btn-hover-a .ui-icon-demo-help,
+.ui-btn-down-b .ui-icon-demo-help{
+    background-image: url(../images/help.dark.png);
+}
+
+.ui-btn-up-b .ui-icon-demo-help,
+.ui-btn-hover-b .ui-icon-demo-help,
+.ui-btn-down-a .ui-icon-demo-help{
+    background-image: url(../images/help.light.png);
+}
+
+.ui-btn-up-a .ui-icon-demo-set,
+.ui-btn-hover-a .ui-icon-demo-set,
+.ui-btn-down-b .ui-icon-demo-set{
+    background-image: url(../images/set.dark.png);
+}
+
+.ui-btn-up-b .ui-icon-demo-set,
+.ui-btn-hover-b .ui-icon-demo-set,
+.ui-btn-down-a .ui-icon-demo-set{
+    background-image: url(../images/set.light.png);
+}
+/* jQuery mobile theme END*/
+
+.ui-navbar{
+    height: 45px;
+}
+
+#mapContainer{
+    width: 100%;
+    height: 100%; /*368px on lumia 825*/
+}
+
+.mh5_mapLogo{
+    display: none;
+}
+
+/*
+//Zoom bottons hide:
+.mh5_hidden{
+    display: block !important;
+}
+*/
+
+#btnShowGeoTagOnMap{
+    display: none;
+}
+
+#optionsPane{
+    float: right; 
+    line-height: 90%;
+}
+
+#aboutTitle{
+    color: rgb(0,140,180);
+}
+
+#aboutIcon{
+    float: left;
+    width: 100px;
+    height: 100px;
+}
+
+.ui-icon-myapp-tag {
+    background: url(../images/myapp-tag.png) no-repeat rgba(0, 0, 0, 0.4) !important;
+}
+
+.ui-icon-myapp-tag-small {
+    background: url(../images/myapp-tag-small.png) no-repeat rgba(0, 0, 0, 0.4) !important;
+}
+
+.ui-icon-myapp-map {
+    background: url(../images/myapp-map.png) no-repeat rgba(0, 0, 0, 0.4) !important;
+}
+
+.ui-icon-myapp-edit {
+    background: url(../images/myapp-edit.png) no-repeat rgba(0, 0, 0, 0.4) !important;
+}
+
+.ui-icon-myapp-about {
+    background: url(../images/myapp-about.png) no-repeat rgba(0, 0, 0, 0.4) !important;
+}
+
+.btnOpt{
+    text-align: left;
+    width: 88%;
+    height: 45px;
+    float: left;
+    padding-left: 2%;
+    line-height: 3em;
+}
+
+#sliderTitel{
+    width: 75%;
+}

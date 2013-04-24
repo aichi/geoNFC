@@ -1,0 +1,95 @@
+/*
+ * Copyright (C) 2012, Nokia gate5 GmbH Berlin
+ *
+ * These coded instructions, statements, and computer programs contain
+ * unpublished proprietary information of Nokia gate5 GmbH, and are
+ * copy protected by law. They may not be disclosed to third parties
+ * or copied or duplicated in any form, in whole or in part, without
+ * the specific, prior written permission of Nokia gate5 GmbH.
+ */
+/**
+ * @theme
+ *
+ */
+
+.mh5_baseColor {
+    color: #124191;
+}
+.mh5_baseBackgroundColor { /* Header bar color */
+    background-color: #124191;
+}
+.mh5_primaryColorBright a {
+    color: #09B;
+}
+
+.mh5_primaryColorBright,
+.mh5_primaryColorBright input[type='search'],
+h1 {
+/* IE needs !important. Otherwise it is overwritten by .mh5_TextInput form input */
+    /*color: #06A;*/
+}
+/* It has to be separate entries for IE10 */
+.mh5_primaryColorBrightPH input:-ms-input-placeholder {
+    color: #06A;
+}
+.mh5_primaryColorBrightPH input::-webkit-input-placeholder {
+    color: #06A;
+}
+
+.mh5_primaryBackgroundColorBright {
+    background-color: #06A;
+}
+.mh5_primaryBorderColorBright {
+    border-color: #06A;
+}
+.mh5_primaryColorDark,
+.mh5_primaryColorDark a {
+    color: #0BD;
+}
+.mh5_primaryBackgroundColorDark,
+.mh5_scrollbarH > div,
+.mh5_scrollbarV > div {
+    background-color: #0BD;
+}
+.mh5_secondaryColorBright,
+.mh5_secondaryColorBright a,
+.mh5_secondaryColorBright input[type='search'] {
+/* IE needs !important. Otherwise it is overwritten by .mh5_TextInput form input */
+    color: #1480DC !important;
+}
+
+/* It has to be separate entries for IE 10 */
+    .mh5_secondaryColorBrightPH input:-ms-input-placeholder {
+        color: #1480DC !important;
+    }
+    .mh5_secondaryColorBrightPH input::-webkit-input-placeholder {
+        color: #1480DC !important;
+    }
+
+.mh5_secondaryBackgroundColorBright {
+    background-color: #1480DC;
+}
+.mh5_secondaryColorDark,
+.mh5_secondaryColorDark a {
+    color: #1480DC;
+}
+.mh5_secondaryBackgroundColorDark {
+    background-color: #1480DC;
+}
+.mh5_standardColorDark {
+    color: #002838;
+}
+.mh5_standardBackgroundColorDark {
+    background-color: #002838;
+}
+
+.mh5_modalBg {
+    background-color: rgba(0, 15, 26, .85) !important;
+}
+
+
+/**
+ * used colors (as color code): #000, #FFF
+ * used colors (as colors variable): #222, #444, #666, #888, #AAA, #CCC, #EEE
+ * Still to check: #16222D
+ */

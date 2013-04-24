@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="text/html; charset=utf-8"/>
+        <title>about</title>
+    </head>
+    <body>
+        <div data-role="page" class="type-interior" data-theme="a" id="about">
+            <div data-role="header" data-theme="a" data-position="fixed" data-tap-toggle="false">
+                <span class="ui-app-title">geoNFC</span>
+                <h1 id="appTitle">about</h1>
+            </div>
+            <div data-role="content" data-theme="a" style="min-height: 105% !important">
+                <div data-role="fieldcontain">
+                    <img src="../images/icon_app_about.png" id="aboutIcon"/>
+                    <h4 id="aboutTitle">geoNFC</h4>
+                    <p>v0.0.1.1<br />
+                    Developed by Willy Riechert</p>
+                </div>
+                <div data-role="fieldcontain">
+                    <h4>Privacy Policy</h4>
+                    <p>This application does not share any personal information or usage 
+                        data.<br />
+                        The location service is for determining your position. Your location will not 
+                        be tracked or saved.
+                    </p>
+                </div>
+                <div data-role="fieldcontain">
+                    <h4>Support</h4>
+                    <p>Do you have some ideas to improve the app? Or found an issue? Feel free to contact me:<br />
+                        <a href="mailto:w.riechert@gmx.net">w.riechert@gmx.net</a>
+                    </p>
+                </div>
+                <div data-role="fieldcontain">
+                    <h4>Additional Notes</h4>
+                    <p>You will need pre-formatted NFC tags to use this app. Windows Phone is not able to read unformatted tags. </p>
+                    <p>You can store map tiles for offline usage. Afterwards there will be 5 zoom layers available and you can use the 
+                       app without a internet connection. </p>
+                    <p>Are you interested in maps? Take a look to great mapping. Visit <a href="http://developer.here.com/">here maps</a></p>
+
+                </div>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <div data-role="navbar" data-iconpos="top">
+                    <ul>
+                        <li><a href="../pages/nfcReader.html" data-icon="myapp-tag">nfcReader</a></li>
+                        <li><a href="../pages/nfcWriter.html" data-icon="myapp-edit" id="btnCreateNewTag">nfcWriter</a></li>
+                        <li><a href="../index.html" data-icon="myapp-map">Map</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <script type="text/javascript" charset="utf-8" src="../js/cordova/nfc-helper.js"></script>
+            <script type="text/javascript">
+                writerMode = false;
+            </script>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,101 @@
+1.0.2
+CHANGES:
+- Ready event of the map component is fired now only after the map has been added to DOM
+
+BUG FIXES:
+- Fixed pinch-to-zoom on chrome browser on android
+- Fixed map panning on chrome on android and IE10 on windows phone 
+- Fixed the reversed zoom level while showing offline tiles on IE10
+- Fixed layout of map settings if using the map component standalone
+
+
+1.0.0
+CHANGES:
+- Renamed nokia.mh5.app.phoneController to nokia.mh5.app.controller
+- Added two additional map schemas: "normal.day.community", "hybrid.day.community"
+- Added terms of use link to the map component
+
+BUG FIXES:
+- Fixed request for routes with multiple waypoints where only the first segment of the route was given back
+
+
+0.2.0
+CHANGES:
+- Added support for Windows Phone 8 (preview)
+- Added focus&blur events to TextArea
+- Changed the parameter name for places provided by Nokia from id to placeId
+- Added leftDelimiter, rightDelimiter properties to nokia.mh5.components.InfoBubble to control the visual delimiters in the infoBubble
+- Changed property infoBubble in nokia.mh5.components.Map parameters to infoBubble
+- Changed structure of the event paramter in click, leftclick and rightclick listeners of nokia.mh5.components.InfoBubble
+  from e.offsetX, e.offsetY to e.clickedPoint.x, e.clickedPoint.y to align with poiclick event
+- Changed the context of infoBubble listeners. They are called in the context of the infoBubble
+- Added parent property to the infoBubble
+- Added ability to show multiple infoBubbles at the same time
+- Changed nokia.mh5.components.InfoBubble.backgroundColor to nokia.mh5.components.InfoBubble.background
+- Added possibility to drop the background image of the infoBubble
+- Introduced nokia.mh5.appId and nokia.mh5.appCode to set the api keys. There is no need to set this properties on every component and adapter
+- Added a possibility to define intermediate waypoints in route requests (walk and drive)
+
+BUG FIXES:
+- Fixed bug where modifying items of nokia.mh5.ui.List changed the prototype of the class
+- Fixed bug where route adapter falsely assumed the user was off-line
+
+DEPRECATED:
+- Deprecated appId and appCode in parameters of single components and adapters. Please use nokia.mh5.appId and nokia.mh5.appCode to set your api keys;
+- Deprecated "from and "to" parameters in nokia.mh5.adapters.Route.fetch method. Please use waypoints instead
+
+
+0.1.9
+CHANGES:
+- new public transport backend;
+- new places backend;
+- new names of category icons;
+- added off-line feature;
+- added a complex last.fm example;
+
+0.1.8
+CHANGES:
+- Enabled the route property in the map component
+- Server requests point to a specific version
+
+BUG FIXES:
+- Fixed rating stars in the infobubble
+
+0.1.7
+CHANGES:
+- Changed the framework status to open beta
+- Moved nokia.mh5.connectors.place.SearchAdapter and nokia.mh5.connectors.route.RouteAdapter to
+  nokia.mh5.adapters.Search and nokia.mh5.adapters.Route
+- Added route component
+- Changed visual design and structure of the developer guide
+
+
+BUG FIXES:
+- Enabled the infobubble documentation in JSDoc
+
+
+0.1.6
+CHANGES:
+- Added add, remove functions to nokia.mh5.ui.List
+- update function of nokia.mh5.ui.List enables to update single list items
+- Added customization of infobubble of nokia.mh5.components.Map
+
+BUG FIXES:
+- Fixed cross domain security issue while loading a language package;
+
+0.1.5
+- Added layers to map component;
+- Improved application flow, especially around place exploration
+- Changed the structure of configuration object
+- Added getRecommendations function to nokia.mh5.connectors.place.SearchAdapter for locations;
+- Details component loads recommendations lazily;
+
+0.1.4
+- Minor changes
+
+
+0.1.3-2012022708607de
+- Restructured documentation;
+- Finalized Last.fm simple example;
+- Added configurator to documentation;
+- Finalized map component API;

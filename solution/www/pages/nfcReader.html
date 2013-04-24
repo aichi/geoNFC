@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="text/html; charset=utf-8"/>
+        <title>nfcWriter</title>
+    </head>
+    <body>
+        <div data-role="page" class="type-interior" data-theme="a" id="nfcReader">
+            <div data-role="header" data-theme="a" data-position="fixed" data-tap-toggle="false">
+                <span class="ui-app-title">geoNFC</span>
+                <h1 id="appTitle">NFC reader</h1>
+            </div>
+            <div data-role="content" data-theme="a" style="min-height: 105% !important">
+                <div data-role="fieldcontain">
+                    <div id="tagContents"></div>
+                    <a href="#map" data-role="button" data-icon="myapp-tag-small" data-iconpos="right" id="btnShowGeoTagOnMap">show on map</a>
+                </div>
+            </div>
+            <div data-role="footer" data-position="fixed" class="footer">
+                <a href="#" id="optionsPane" onclick="optionsPaneAnimate(90);">...</a>
+                <div data-role="navbar" data-iconpos="top">
+                    <ul>
+                        <li><a href="../pages/nfcWriter.html" onclick="optionsPaneAnimate(45);" data-icon="myapp-edit" id="btnCreateNewTag">nfcWriter</a></li>
+                        <li><a href="../index.html" onclick="optionsPaneAnimate(45);" data-icon="myapp-map"></a></li>
+                    </ul>
+                </div>
+                <div class="btnOpt" id="aboutReader">about</div>
+            </div>
+
+            <script src="../js/view_helper.js" type="text/javascript"></script>
+            <script type="text/javascript" charset="utf-8" src="../js/cordova/nfc-helper.js"></script>
+            <script type="text/javascript">
+                writerMode = false;
+                showInstructions();
+
+                $("#aboutReader").click(function () {
+                    changePage("about");
+                });
+            </script>
+        </div>
+    </body>
+</html>

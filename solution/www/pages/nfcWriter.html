@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="text/html; charset=utf-8"/>
+        <title>nfcWriter</title>
+    </head>
+    <body>
+        <div data-role="page" class="type-interior" data-theme="a" id="nfcWriter">
+            <div data-role="header" data-theme="a" data-position="fixed" data-tap-toggle="false">
+                <span class="ui-app-title">geoNFC</span>
+                <h1>nfc writer</h1>
+            </div>
+
+            <div data-role="content" data-theme="a">
+                <div data-role="fieldcontain">
+                    <h4>How to create a new geoTag?</h4>
+                    <p>Do a longpress on map and press "pen" on bottom.<br />
+                       Now tap a tag to write. Tag must be NDEF formatted. The old content will be overwritten.
+                    </p>
+                </div>
+                <h4>Content of your nfc tag</h4>
+                <div data-role="fieldcontain">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="inputName" value="NEW tag">
+                    <label for="name">Latitude</label>
+                    <input type="number" name="name" id="inputTagLat" value="52.3">
+                    <label for="name">Longitude</label>
+                    <input type="number" name="name" id="inputTagLon" value="13.4">
+                    <br />
+                    <b>Additional information on your tag</b>
+                    <label for="slider" id="sliderTitel">Add a Windows Phone Launch App record:</label>
+                    <select name="slider" id="slider" data-role="slider">
+                        <option value="off">Off</option>
+                        <option value="on">On</option>
+                    </select>
+                </div>
+                <div id="tagContents"></div>
+            </div>
+            <div data-role="footer" data-position="fixed" class="footer">
+                <a href="#" id="optionsPane" onclick="optionsPaneAnimate(90);">...</a>
+                <div data-role="navbar" data-iconpos="top">
+                    <ul>
+                        <li><a href="../pages/nfcReader.html" onclick="optionsPaneAnimate(45);" data-icon="myapp-tag">nfcReader</a></li>
+                        <li><a href="#" data-icon="myapp-map" onclick="updateNewNfcTag(); optionsPaneAnimate(45);">Map</a></li>
+                    </ul>
+                </div>
+                <div class="btnOpt" id="aboutWriter">about</div>
+            </div>
+
+            <script type="text/javascript">
+                writerMode = true;
+                $("#inputTagLat").val(newNFCtag.latitude);
+                $("#inputTagLon").val(newNFCtag.longitude);
+                $("#inputName").val(newNFCtag.name);
+
+                function updateNewNfcTag() {
+                    writerMode = false;
+                    console.log("do update writerMode=" + writerMode);
+
+                    if (nfcPoi !== undefined) {
+                        map.removePoi(nfcPoi);
+                    }
+                    newNFCtag.latitude = $("#inputTagLat").val();
+                    newNFCtag.longitude = $("#inputTagLon").val();
+                    newNFCtag.name = $("#inputName").val();
+                    nfcPoi = map.createPoi("../images/tagNew.png", { longitude: newNFCtag.longitude, latitude: newNFCtag.latitude, name: newNFCtag.name, description: newNFCtag.latitude + " / " + newNFCtag.longitude });
+                    map.moveTo(nfcPoi);
+                    $.mobile.changePage("../index.html");
+                };
+
+                $("#aboutWriter").click(function () {
+                    changePage("about");
+                });
+            </script>
+        </div>
+    </body>
+</html>
