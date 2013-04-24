@@ -10,3 +10,30 @@ See the app [geoNFC](http://www.windowsphone.com/de-de/store/app/geonfc/8656f870
 Supported Platforms
 -------------------
 * Windows Phone 8
+
+## Contents
+
+* [Installing](#installing)
+* [Used technologies](#Used technologies)
+  - [Phonegap NFC Plugin](#Phonegap NFC Plugin)
+  - [jQuery mobile Windows Phone Theme](#jQuery mobile Windows Phone Theme)
+  - [Map](#license)
+ 
+# Installing
+
+This solution was created with Microsoft Visual Studio 2012 ultimate. 
+
+# Used technologies
+
+## Phonegap NFC Plugin
+
+NFC is normally not supported in PhoneGap. It exists a cross-platform plugin that supports Android, WP8 and BlackBerry7/10. 
+- See the [plugin](https://github.com/chariotsolutions/phonegap-nfc) on GitHub
+
+##jQuery mobile Windows Phone Theme
+
+[jqmobile-metro-theme](http://sgrebnov.github.io/jqmobile-metro-theme/)
+
+## Map
+
+This app use the Mobile HTML5 Framework from [here](http://developer.here.com/mobile_html5) .When you use the map for your own project please register [HERE](http://api.developer.nokia.com/) and get your private authentication token and appid.
