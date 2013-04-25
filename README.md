@@ -18,6 +18,7 @@ Supported Platforms
   - [Phonegap NFC Plugin](#phonegap-NFC-Plugin)
   - [jQuery mobile Windows Phone Theme](#jQuery-mobile-Windows-Phone-Theme)
   - [Map](#map)
+* [License](#license)
  
 # Installing
 
@@ -39,3 +40,8 @@ To make the application look like a native Windows Phone application, a special 
 ## Map
 
 This app use the Mobile HTML5 Framework from [here](http://developer.here.com/mobile_html5) .When you use the map for your own project please register [HERE](http://api.developer.nokia.com/) and get your private authentication token and appid.
+
+# License
+
+![ScreenShot](https://github.com/i-saumitra/Voice-controlled-MP3-Player/blob/master/screenshot.jpg) by - nc - sa
+Autor: Willy Riechert
