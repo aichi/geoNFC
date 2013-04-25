@@ -43,5 +43,4 @@ This app use the Mobile HTML5 Framework from [here](http://developer.here.com/mo
 
 # License
 
-![ScreenShot](https://github.com/i-saumitra/Voice-controlled-MP3-Player/blob/master/screenshot.jpg) by - nc - sa
-Autor: Willy Riechert
+![ScreenShot](http://p72b.bplaced.net/webpage/img/by-nc-sa.png) by - nc - sa
