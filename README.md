@@ -43,4 +43,4 @@ This app use the Mobile HTML5 Framework from [here](http://developer.here.com/mo
 
 # License
 
-![ScreenShot](http://p72b.bplaced.net/webpage/img/by-nc-sa.png) by - nc - sa
+![ScreenShot](http://p72b.bplaced.net/webpage/img/by-nc-sa.png)
